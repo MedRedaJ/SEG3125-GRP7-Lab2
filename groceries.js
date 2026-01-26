@@ -16,13 +16,54 @@ var products = [
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "cake",
+		vegetarian: true,
+		glutenFree: false,
+		price: 11.99
+	},
+	{
+		name: "eggs",
+		vegetarian: true,
+		glutenFree: true,
+		price: 3.79
+	},
+	{
+		name: "granola",
+		vegetarian: true,
+		glutenFree: true,
+		price: 7.49
+	},
+	{
+		name: "meat",
 		vegetarian: false,
 		glutenFree: true,
-		price: 10.00
+		price: 8.99
+	},
+	{
+		name: "milk",
+		vegetarian: true,
+		glutenFree: true,
+		price: 4.49
+	},
+	{
+		name: "riceflour",
+		vegetarian: true,
+		glutenFree: true,
+		price: 13.47
+	},
+	{
+		name: "tofu",
+		vegetarian: true,
+		glutenFree: true,
+		price: 5.39
+	},
+	{
+		name: "soda",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.49
 	}
 ];
-	
 
 
 // given restrictions provided, make a reduced list of products
