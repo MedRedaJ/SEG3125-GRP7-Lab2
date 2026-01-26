@@ -20,18 +20,31 @@
   <p>Tell us a bit about you.</p>
 	Choose a Category:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">GlutenFree</option>
     <option value="None">None</option>
 	</select>
+
+  <h3> Accessability </h3>
+  <input type="checkbox" id="BigFont" name="BiggerFont" value="BigFont">
+  <label for="BigFont"> Enable Bigger Font</label><br>
+  <input type="checkbox" id="DisplayImg" name="DisplayProd" value="ImgDisplay">
+  <label for="DisplayImg"> Display Images for Products</label><br>
+  <input type="checkbox" id="cheapPrice" name="Bigger Font" value="Cheapest" onchange="sortPrice(this.id, 'displayProduct')">
+  <label for="cheapPrice"> Sort by cheapest</label><br>
+
+
 </div>
 
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
-	 <div id="displayProduct"></div>
+	 <div id="displayProduct">
+
+
+
+   </div>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>
