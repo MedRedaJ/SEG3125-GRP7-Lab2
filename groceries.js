@@ -85,6 +85,16 @@ function restrictListProducts(prods, restriction) {
 	return product_names;
 }
 
+function sortPrice(prods){
+	return prods.sort((a,b) => a.price - b.price);
+}
+
+function appearanceProds(prods){
+	
+}
+
+
+
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
