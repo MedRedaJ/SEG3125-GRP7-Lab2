@@ -4,64 +4,74 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "broccoli",
 		vegetarian: true,
 		glutenFree: true,
-		price: 1.99
+		price: 1.99,
+		img: "broccoli.jpeg"
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
-		price: 2.35
+		price: 2.35,
+		img: "bread.jpeg"
 	},
 	{
 		name: "cake",
 		vegetarian: true,
 		glutenFree: false,
-		price: 11.99
+		price: 11.99,
+		img: "cake.jpeg"
 	},
 	{
 		name: "eggs",
 		vegetarian: true,
 		glutenFree: true,
-		price: 3.79
+		price: 3.79,
+		img: "eggs.jpeg"
 	},
 	{
 		name: "granola",
 		vegetarian: true,
 		glutenFree: true,
-		price: 7.49
+		price: 7.49,
+		img: "granola.jpeg"
 	},
 	{
 		name: "meat",
 		vegetarian: false,
 		glutenFree: true,
-		price: 8.99
+		price: 8.99,
+		img: "meat.jpeg"
 	},
 	{
 		name: "milk",
 		vegetarian: true,
 		glutenFree: true,
-		price: 4.49
+		price: 4.49,
+		img: "milk.jpeg"
 	},
 	{
 		name: "riceflour",
 		vegetarian: true,
 		glutenFree: true,
-		price: 13.47
+		price: 13.47,
+		img: "riceflour.jpeg"
 	},
 	{
 		name: "tofu",
 		vegetarian: true,
 		glutenFree: true,
-		price: 5.39
+		price: 5.39,
+		img: "tofu.jpeg"
 	},
 	{
 		name: "soda",
 		vegetarian: true,
 		glutenFree: true,
-		price: 2.49
+		price: 2.49,
+		img: "soda.jpeg"
 	}
 ];
 
@@ -75,7 +85,7 @@ function restrictListProducts(prods, restriction) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
+		else if ((restriction == "Gluten-free") && (prods[i].glutenFree == true)){
 			product_names.push(prods[i].name);
 		}
 		else if (restriction == "None"){
@@ -97,7 +107,7 @@ function appearanceProds(prods){
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
-	totalPrice = 0;
+	let totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
 		if (chosenProducts.indexOf(products[i].name) > -1){
 			totalPrice += products[i].price;

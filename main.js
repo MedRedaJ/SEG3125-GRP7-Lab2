@@ -22,10 +22,18 @@ function openInfo(evt, tabName) {
 
 }
 
+document.getElementById('BigFont').addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('bigFont');
+    } else {
+        document.body.classList.remove('bigFont');
+    }
+});
+
 
 	
 // generate a checkbox list from a list of products
-// it makes each product name as the label for the checkbos
+// it makes each product name as the label for the checkbox
 
 function populateListProductChoices(slct1, slct2) {
     var s1 = document.getElementById(slct1);
@@ -56,6 +64,23 @@ function populateListProductChoices(slct1, slct2) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
 		s2.appendChild(label);
+
+		if (document.getElementById("DisplayImg").checked){
+			// find the full product object
+	let productObj = products.find(p => p.name === productName);
+
+	if (productObj) {
+		let img = document.createElement("img");
+		img.src = "./products/" + productObj.img;
+
+		img.style.width = "80px";
+		img.style.display = "block";
+		img.style.marginBottom = "10px";
+
+		s2.appendChild(img);
+	}
+}
+
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    

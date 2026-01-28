@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	 <!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> -->
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -9,26 +9,26 @@
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Customer')">Customer</button>
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
 </div>
 
 <!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
+<div id="Customer" class="tabcontent">
+  <h3>Customer Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
+    <option value="Gluten-free">Gluten-free</option>
     <option value="None">None</option>
 	</select>
 
-  <h3> Accessability </h3>
+  <h3> Accessibility </h3>
   <input type="checkbox" id="BigFont" name="BiggerFont" value="BigFont">
   <label for="BigFont"> Enable Bigger Font</label><br>
-  <input type="checkbox" id="DisplayImg" name="DisplayProd" value="ImgDisplay">
+  <input type="checkbox" id="DisplayImg" name="DisplayProd" value="ImgDisplay" onchange="populateListProductChoices('dietSelect','displayProduct')">
   <label for="DisplayImg"> Display Images for Products</label><br>
   <input type="checkbox" id="cheapPrice" name="Bigger Font" value="Cheapest" onchange="sortPrice(this.id, 'displayProduct')">
   <label for="cheapPrice"> Sort by cheapest</label><br>
@@ -55,6 +55,11 @@
   <p>Here is your cart.</p>
   <div id="displayCart"></div>
 </div>
+
+<footer>
+  <p style="text-align:center; margin-top:20px;">Website designed by Group 07</p>
+</footer>
+
 
 <script src="groceries.js"></script>
 <script src="main.js"></script>

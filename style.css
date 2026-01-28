@@ -35,3 +35,25 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+ /* 50% bigger font-size */
+.bigFont {
+  font-size: 1.5em; 
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+label {
+  margin-left: 5px;
+}
+
+#displayProduct, #displayCart {
+  margin-top: 10px;
+}
+
+
