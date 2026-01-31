@@ -7,73 +7,84 @@ var products = [
 		name: "broccoli",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 1.99,
-		img: "broccoli.jpeg"
+		img: "./products/broccoli.jpeg"
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 2.35,
-		img: "bread.jpeg"
+		img: "./products/bread.jpeg"
 	},
 	{
 		name: "cake",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 11.99,
-		img: "cake.jpeg"
+		img: "./products/cake.jpeg"
 	},
 	{
 		name: "eggs",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 3.79,
-		img: "eggs.jpeg"
+		img: "./products/eggs.jpeg"
 	},
 	{
 		name: "granola",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 7.49,
-		img: "granola.jpeg"
+		img: "./products/granola.jpeg"
 	},
 	{
 		name: "meat",
 		vegetarian: false,
 		glutenFree: true,
+		organic: true,
 		price: 8.99,
-		img: "meat.jpeg"
+		img: "./products/meat.jpeg"
 	},
 	{
 		name: "milk",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 4.49,
-		img: "milk.jpeg"
+		img: "./products/milk.jpeg"
 	},
 	{
 		name: "riceflour",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 13.47,
-		img: "riceflour.jpeg"
+		img: "./products/riceflour.jpeg"
 	},
 	{
 		name: "tofu",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 5.39,
-		img: "tofu.jpeg"
+		img: "./products/tofu.jpeg"
 	},
 	{
 		name: "soda",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 2.49,
-		img: "soda.jpeg"
+		img: "./products/soda.jpeg"
 	}
 ];
+
 
 
 // given restrictions provided, make a reduced list of products
@@ -87,17 +98,21 @@ function restrictListProducts(prods, restriction) {
 		}
 		else if ((restriction == "Gluten-free") && (prods[i].glutenFree == true)){
 			product_names.push(prods[i].name);
+		}else if ((restriction == "Organic") && (prods[i].organic == true)){
+			product_names.push(prods[i].name);
 		}
 		else if (restriction == "None"){
 			product_names.push(prods[i].name);
 		}
 	}
+
 	return product_names;
 }
 
 function appearanceProds(prods){
 	
 }
+
 
 
 

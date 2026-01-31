@@ -1,5 +1,9 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -41,6 +45,12 @@
   font-size: 1.5em; 
 }
 
+h1 {
+  text-align: center;
+  color: #333;
+  background-color: orange;
+}
+
 footer {
   text-align: center;
   margin-top: 20px;
@@ -52,8 +62,33 @@ label {
   margin-left: 5px;
 }
 
-#displayProduct, #displayCart {
+ #displayCart {
   margin-top: 10px;
+ }
+
+#displayProduct{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px;
+  text-align: center;
+}
+
+.card {
+  background: rgb(241, 240, 240);
+  border-width: 2px;
+  padding: 15px;
+  margin: 3px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 
